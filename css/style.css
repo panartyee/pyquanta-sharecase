@@ -1,0 +1,698 @@
+/* GitHub风格全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* GitHub 配色方案 */
+    --color-text-primary: #24292e;
+    --color-text-secondary: #586069;
+    --color-text-link: #0366d6;
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f6f8fa;
+    --color-bg-tertiary: #fafbfc;
+    --color-border: #e1e4e8;
+    --color-border-dark: #d1d5da;
+    --color-btn-primary: #2ea44f;
+    --color-btn-primary-hover: #2c974b;
+    --color-btn-secondary: #f6f8fa;
+    --color-btn-secondary-hover: #f3f4f6;
+    --color-state-primary: #0366d6;
+    --color-state-primary-hover: #0058c5;
+    --shadow-small: 0 1px 0 rgba(27,31,35,0.04);
+    --shadow-medium: 0 1px 3px rgba(27,31,35,0.12);
+    --shadow-large: 0 1px 5px rgba(27,31,35,0.15);
+    --border-radius: 6px;
+    --transition: 0.15s ease-in-out;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* GitHub风格导航栏 */
+.navbar {
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.logo i {
+    font-size: 20px;
+    color: var(--color-text-primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-links a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--color-text-link);
+}
+
+.nav-links a.active {
+    color: var(--color-text-link);
+    font-weight: 600;
+}
+
+/* 主要内容区 */
+.main-content {
+    min-height: calc(100vh - 120px);
+    padding: 24px 0 48px;
+}
+
+/* GitHub风格头部横幅 */
+.hero {
+    text-align: center;
+    padding: 48px 32px;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+}
+
+.hero h1 i {
+    margin-right: 12px;
+    color: var(--color-text-link);
+}
+
+.hero p {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    margin-bottom: 4px;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+}
+
+.stat-item p {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+/* GitHub风格搜索和筛选 */
+.filter-section {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 6px 12px 6px 36px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: var(--transition);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--color-state-primary);
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.12);
+}
+
+.search-box input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.category-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-primary);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 14px;
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.category-btn:hover {
+    background: var(--color-bg-secondary);
+}
+
+.category-btn.active {
+    background: var(--color-state-primary);
+    border-color: var(--color-state-primary);
+    color: #fff;
+}
+
+/* GitHub风格文件网格 */
+.files-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+/* GitHub风格文件卡片 */
+.file-card {
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.file-card:hover {
+    border-color: var(--color-border-dark);
+    box-shadow: var(--shadow-medium);
+}
+
+.file-screenshot {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.file-screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.file-screenshot .placeholder-icon {
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.file-category-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-text-primary);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: var(--shadow-small);
+}
+
+.file-info {
+    padding: 16px;
+}
+
+.file-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-name:hover {
+    color: var(--color-state-primary);
+}
+
+.file-description {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.file-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+}
+
+.file-meta i {
+    margin-right: 4px;
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--color-text-secondary);
+}
+
+.loading i {
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--color-text-link);
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--color-text-secondary);
+}
+
+.empty-state i {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+    color: var(--color-text-secondary);
+}
+
+.empty-state p {
+    font-size: 16px;
+}
+
+/* GitHub风格模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    animation: fadeIn 0.2s ease;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: var(--color-bg-primary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    max-width: 680px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.2s ease;
+    box-shadow: var(--shadow-large);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-16px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+    font-size: 16px;
+}
+
+.modal-close:hover {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+}
+
+.modal-header {
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.modal-header h2 {
+    color: var(--color-text-primary);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.modal-meta {
+    display: flex;
+    gap: 16px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.modal-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.screenshot-preview {
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+}
+
+.screenshot-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-description {
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background: var(--color-bg-secondary);
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: var(--color-btn-primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid rgba(27,31,35,0.15);
+}
+
+.btn-download:hover {
+    background: var(--color-btn-primary-hover);
+}
+
+.btn-copy {
+    padding: 7px 14px;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-copy:hover {
+    background: var(--color-bg-secondary);
+}
+
+.btn-copy.copied {
+    background: var(--color-btn-primary);
+    border-color: var(--color-btn-primary);
+    color: #fff;
+}
+
+/* 关于页面 */
+.about-section {
+    padding: 32px 0;
+}
+
+.about-section h2 {
+    color: var(--color-text-primary);
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.about-section p {
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.about-section a {
+    color: var(--color-text-link);
+    text-decoration: none;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
+/* GitHub风格页脚 */
+.footer {
+    background: var(--color-bg-primary);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    padding: 32px 0;
+    margin-top: 48px;
+}
+
+.footer p {
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero {
+        padding: 32px 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+    }
+
+    .search-box {
+        min-width: 100%;
+    }
+
+    .category-filter {
+        justify-content: flex-start;
+    }
+
+    .files-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 20px 20px 16px;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .btn-download, .btn-copy {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* GitHub风格滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border-dark);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-secondary);
+}
+
+/* 文件卡片动画 */
+.file-card {
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* GitHub风格徽章 */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 12px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
