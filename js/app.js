@@ -26,15 +26,15 @@ const filesData = [
     },
     {
         id: 3,
-        name: "TDX量化策略代码从零开始",
-        description: "TDX量化交易策略代码教程，从零开始学习量化交易",
+        name: "识别A股牛熊逃顶策略",
+        description: "双策略付费商品",
         category: "software",
-        size: "5.2 GB",
-        date: "2024-02-01",
-        screenshot: "screenshots/3TDX.png",
-        baiduLink: "https://pan.baidu.com/s/zzzzz",
-        password: "video",
-        downloads: 89
+        size: "0.2 GB",
+        date: "2026-04-01",
+        screenshot: "screenshots/3peakrun.jpeg",
+        baiduLink: "https://mp.weixin.qq.com/s/ju7hQdXgm8a0SBaNHDXjKQ",
+        password: "null",
+        downloads: 59
     },
     {
         id: 4,
@@ -43,8 +43,8 @@ const filesData = [
         category: "video",
         size: "8.3 GB",
         date: "2026-02-10",
-        screenshot: "screenshots/4.png",
-        baiduLink: "https://pan.baidu.com/s/mmmmm",
+        screenshot: "screenshots/nanobot_arch.png",
+        baiduLink: "https://github.com/HKUDS/nanobot",
         password: "ml123",
         downloads: 312
     },
@@ -56,7 +56,7 @@ const filesData = [
         size: "3.7 GB",
         date: "2026-02-15",
         screenshot: "screenshots/5.png",
-        baiduLink: "https://pan.baidu.com/s/nnnnn",
+        baiduLink: "https://github.com/google-research/tuning_playbook",
         password: "office",
         downloads: 178
     },
@@ -68,7 +68,7 @@ const filesData = [
         size: "12.5 GB",
         date: "2025-02-20",
         screenshot: "screenshots/6.png",
-        baiduLink: "https://pan.baidu.com/s/ppppp",
+        baiduLink: "https://github.com/kay-ou/ptradeAPI",
         password: "3dmodel",
         downloads: 67
     }
