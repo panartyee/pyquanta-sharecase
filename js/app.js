@@ -27,7 +27,7 @@ const filesData = [
     {
         id: 3,
         name: "识别A股牛熊逃顶策略",
-        description: "双策略付费商品",
+        description: "双策略付费商品，由GLM5.1多轮蒸馏训练",
         category: "software",
         size: "0.2 GB",
         date: "2026-04-01",
@@ -39,7 +39,7 @@ const filesData = [
     {
         id: 4,
         name: "股票AI机器训练实战记录",
-        description: "包含深度学习、NLP、计算机视觉等方向的实战项目",
+        description: "包含香港理工大学深度学习、NLP、计算机视觉等方向的实战项目",
         category: "video",
         size: "8.3 GB",
         date: "2026-02-10",
@@ -51,7 +51,7 @@ const filesData = [
     {
         id: 5,
         name: "大语言模型训练语料库搭建",
-        description: "Word、Excel、PPT从入门到精通的视频教程",
+        description: "如何利用现有GLM5.1为例来进行模型蒸馏和语料编入",
         category: "document",
         size: "3.7 GB",
         date: "2026-02-15",
